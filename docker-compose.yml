@@ -1,0 +1,12 @@
+services:
+  web:
+    image: symfony-debian:2.3
+    volumes:
+      - ./proyecto:/var/www
+    environment:
+      APP_USER: "daw"
+      APP_GROUP: "daw"
+      APP_UID: "1001"
+      APP_GUID: "1001"
+    ports:
+      - 8000:80
